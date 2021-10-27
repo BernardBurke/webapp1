@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace webapp.Pages.Joubert
+namespace webapp.Pages
 {
-    public class EmptyModel : PageModel
+    public class JoubertModel : PageModel
     {
         public void OnGet()
         {

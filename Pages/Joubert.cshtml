@@ -1,0 +1,29 @@
+@page
+@model webapp.Pages.JoubertModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Joubert</title>
+    <script src="js/site.js"></script>
+    <script>
+    var do_ping = function() {
+        ping(document.getElementById('pingurl').value).then(function(delta) {
+            alert(delta);
+            document.write(delta);
+        }).catch(function(error) {
+            alert(String(error));
+        });
+    };
+    </script>
+</head>
+<body>
+    <input id='pingurl' type='text' value='http://abc.net.au'></input>
+    <button onclick='do_ping()'>Ping</button>
+</body>
+</html>
