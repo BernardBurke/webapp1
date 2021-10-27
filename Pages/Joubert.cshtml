@@ -15,7 +15,6 @@
     var do_ping = function() {
         ping(document.getElementById('pingurl').value).then(function(delta) {
             alert(delta);
-            document.write(delta);
         }).catch(function(error) {
             alert(String(error));
         });
