@@ -15,6 +15,7 @@
     var do_ping = function() {
         ping(document.getElementById('pingurl').value).then(function(delta) {
             alert(delta);
+            localStorage.setItem("DELTA",delta);
         }).catch(function(error) {
             alert(String(error));
         });
@@ -24,5 +25,23 @@
 <body>
     <input id='pingurl' type='text' value='http://abc.net.au'></input>
     <button onclick='do_ping()'>Ping</button>
+    <br>
+    <label for="stringName" class="cols-sm-2 control-label">@Html.Hidden("stringName", "")</label>
+    <form id="form1">
+        <div>
+            <label for="status">Status</label>
+        </div>
+       
+        <div>
+            <input id="status1" type="text" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+
+    <script> 
+    $('#stringName').replaceWith(localStorage.getItem('DELTA'));
+    </script>
 </body>
 </html>

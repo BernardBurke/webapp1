@@ -1,0 +1,1 @@
+dotnet aspnet-codegenerator razorpage Joubert Empty -outDir Pages
